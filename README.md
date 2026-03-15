@@ -28,4 +28,6 @@ A web-based Employee Management System built using Flask and MySQL.
 4. Run app.py
 
 ## Author
-Karthiga
+Dhamodharan
+
+
