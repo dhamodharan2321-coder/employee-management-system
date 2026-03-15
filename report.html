@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employees</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2>Employee List</h2>
+
+<form method="GET">
+
+<input type="text" name="search" placeholder="Search employee">
+
+<button type="submit">Search</button>
+
+</form>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Department</th>
+<th>Salary</th>
+<th>Action</th>
+</tr>
+
+{% for emp in employees %}
+
+<tr>
+
+<td>{{emp[0]}}</td>
+<td>{{emp[1]}}</td>
+<td>{{emp[2]}}</td>
+<td>{{emp[3]}}</td>
+<td>{{emp[4]}}</td>
+
+<td>
+
+<a href="/edit/{{emp[0]}}">Edit</a>
+<a href="/delete/{{emp[0]}}">Delete</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>
